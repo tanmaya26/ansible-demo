@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Ensure roles dir exists
+      command: mkdir -p /etc/ansible/roles
+
+    - name: Install roles
+      command: ansible-galaxy install --roles-path /etc/ansible/roles {{item}}
+      with_items:
+        - geerlingguy.nodejs

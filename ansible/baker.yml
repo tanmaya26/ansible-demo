@@ -1,0 +1,9 @@
+name: hw4
+vm:
+  ip: 192.168.14.14
+  memory: 4096
+  ports: 8080
+tools:
+  - ansible
+commands:
+  remote: ssh -i vagrant@192.168.14.100
