@@ -1,28 +1,23 @@
 - hosts: localhost
   remote_user: root
   become: true
+  vars:
+    nodejs_npm_global_packages:
+      - name: forever
   roles:
     - role: geerlingguy.nodejs
   tasks:
-    - name: Install forever
-      command: npm i forever -g 
-      remote_user: root
-      become: true
-    - name: Delete App folder if exists
+    - name: check App folder does't already exist
       file:
         path: App
         state: absent
     - name: Clone repo
       command: git clone https://github.com/CSC-DevOps/App
-      remote_user: root
-      become: true
-    - name: Install packages
+    - name: npm install
       npm:
         path: App/
-    - name: run forever
-      command: forever start App/main.js
-      remote_user: root
-      become: true
+    - name: run app
+      command: /usr/local/lib/npm/bin/forever start App/main.js
     - name: check bash version
       apt:
         name: bash
@@ -39,7 +34,7 @@
       apt:
         name: openssh-server
         state: latest
-    - name: Clean-up of contents in /tmp/*
+    - name: clean-up of contents in /tmp/*
       shell: rm -rf /tmp/*   
       args:
         warn: False
