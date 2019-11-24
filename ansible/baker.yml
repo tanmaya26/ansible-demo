@@ -1,7 +1,7 @@
 name: hw4
 vm:
   ip: 192.168.14.14
-  memory: 4096
+  memory: 2048
   ports: 8080
 tools:
   - ansible
