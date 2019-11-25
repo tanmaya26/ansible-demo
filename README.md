@@ -34,7 +34,8 @@ CM tools help to make sure any changes whether changes in versioning, packages, 
     - Most softwares today rely heavily on open source packages and tools and CM helps to take care of handling version updates of external dependencies. 
     - Developers are distributed geographically over the world and make concurrent changes and updates to the software. CM helps manage the updates to code, handles merges, builds and deployment efficiently. 
   
-  If CM is not used, many things could go wrong. 
+    If CM is not used, many things could go wrong: 
+  
     - It will become tedious and redundant to manage concurrent changes to software and integrate each change one by one as in today's time developers merge code almost many times a day.
     - There could be product incompatibility on different platforms or version conflict. Without CM, these problems will be detected at later stage in Production
     - Build failure will result in breakdown of the product and often manual intervention to fix the components.  
