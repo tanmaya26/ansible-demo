@@ -1,6 +1,6 @@
 # HW5-510
 
-###Instructions to run.
+### Instructions to run.
 
 1. git clone https://github.ncsu.edu/tnanda/HW5-510.git
 2. cd HW5-510/ansible
@@ -12,8 +12,10 @@ Once inside VM, run the following commands
 2. ansible-playbook roles.yml
 3. ansible-playbook tasks.yml
 
-###Concepts (20 points):
+### Concepts (20 points):
 
 1. Explain continuous integration. How is it used on a project?
+
+
 
 
