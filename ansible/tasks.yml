@@ -1,12 +1,11 @@
 - hosts: localhost
   remote_user: root
   become: true
-  vars:
-    nodejs_npm_global_packages:
-      - name: forever
   roles:
     - role: geerlingguy.nodejs
   tasks:
+    - name: install forever
+      command: npm i forever -g
     - name: check App folder does't already exist
       file:
         path: App
@@ -17,7 +16,7 @@
       npm:
         path: App/
     - name: run app
-      command: /usr/local/lib/npm/bin/forever start App/main.js
+      command: forever start App/main.js start 8080
     - name: check bash version
       apt:
         name: bash
