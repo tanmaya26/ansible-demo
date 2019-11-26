@@ -13,9 +13,11 @@ Once inside VM, run the following commands
 2. ansible-playbook roles.yml
 3. ansible-playbook tasks.yml
 
+NOTE: All the assignment tasks including setup are in tasks.yml file. 
+
 ### Demo Link
 
-https://photos.app.goo.gl/RyCQxv8PHaBbTyBt6
+[click me](https://photos.app.goo.gl/RyCQxv8PHaBbTyBt6)
 
 
 ### Concepts (20 points):
